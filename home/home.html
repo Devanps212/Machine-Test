@@ -57,7 +57,7 @@
         </nav>
     </header>
 
-    <section class="bg-cover relative bg-center bg-gray-100 h-screen">
+    <section class="bg-cover banner relative bg-center bg-gray-100 sm:h-screen" role="banner">
         <div class="flex flex-col justify-start items-start py-12">
             <div class="hidden lg:block rounded-full border flex justify-start items-center ml-28 border-black p-2 px-4 text-container mb-4">
                 <p class="text-left">Trust by the most innovative</p>
@@ -65,7 +65,7 @@
 
             <!--Banner Heading-->                
             <div class="w-full flex flex-col space-y-4 px-9">
-                <span class=" leading-tight banner-head text-xl md:text-3xl lg:text-6xl font-semibold ">AIRPODS</span>
+                <span class=" leading-tight banner-head text-xl font-semibold ">AIRPODS</span>
                 <div class="flex justify-between">
                     <div class="hidden xl:block p-6 bg-transparent max-w-md ml-10">
                         <p class="text-lg text-gray-700 mb-4 ">
@@ -88,64 +88,150 @@
         </div>
 
         <!--Earpod Image-->
-        <div class="image-layout flex justify-center absolute w-full h-auto top-0 left-0">
-            <img src="/asset/banner/_removal.ai__8d812dc3-757d-422b-987c-43d732d66448-screenshot-349-removebg-preview (1) (1) (1).png" alt="AirPods Image" class="airpod-img mx-5 h-3/4 w-1/4" />
+        <div class="image-layout flex xl:justify-center justify-end absolute w-full h-auto top-0 left-0">
+            <img 
+            src="/asset/banner/_removal.ai__8d812dc3-757d-422b-987c-43d732d66448-screenshot-349-removebg-preview (1) (1) (1).png" 
+            alt="Image of AirPods without background" 
+            class="airpod-img mx-5 h-3/4 xl:-mt-10 mr-22 w-80" 
+            />
         </div>
     </section>
-    <section class="sub-banner w-full bg-gray-100 banner-div max-w-full px-6 gap-4">
-            <div class="each-banner-div rounded-2xl border border-gray-500 bg-gray-200 flex flex-col justify-between h-3/4 p-4">
-                <h5 class="banner-satoshi-font text-xl md:text-3xl lg:text-4xl font-semibold px-5">
-                    35.5<br/>
-                    <span class="text-sm md:text-xl lg:text-xl w-full font-light lg:font-medium">5 HOURS</span>
-                </h5>
-                <div class="flex justify-end items-end flex-1">
-                    <img alt="earpode images" class="object-cover w-auto lg:w-80 h-auto mt-auto" src="/asset/banner/pixelcut-export.png" />
-                </div>
+    <section class="sub-banner w-full bg-gray-100 banner-div max-w-full px-6 gap-4" role="Sub-banner">
+        <div class="each-banner-div rounded-2xl border border-gray-500 bg-gray-200 flex flex-col justify-between h-3/4 p-4" aria-labelledby="battery-status">
+            <h5 id="battery-status" class="banner-satoshi-font text-xl md:text-3xl lg:text-4xl font-semibold px-5">
+                35.5<br/>
+                <span class="text-sm md:text-xl lg:text-xl w-full font-light lg:font-medium">5 HOURS</span>
+            </h5>
+            <div class="flex justify-end items-end flex-1">
+                <img alt="EarPods battery status illustration" class="object-cover w-auto lg:w-80 h-auto mt-auto" src="/asset/banner/pixelcut-export.png" />
             </div>
-            <div class="each-banner-div rounded-2xl border border-gray-500 bg-gray-200 flex flex-col justify-between h-3/4 p-7">
-                <h5 class="banner-satoshiLight-font text-4xl font-bold px-5 text-center text-xl">MORE LISTENING, LESS<br/>CHARGING</h5>
-                <div class="flex justify-center items-center w-full">
-                    <img alt="earpode info" class="object-cover w-auto lg:w-80  h-auto mt-auto" src="/asset/banner/pixelcut-export (1).png"/>
-                </div>
+        </div>
+        <div class="each-banner-div rounded-2xl border border-gray-200 bg-white flex flex-col justify-between h-3/4 p-7" aria-labelledby="listening-info">
+            <h5 id="listening-info" class="banner-satoshiLight-font text-4xl font-bold px-5 text-center text-xl">MORE LISTENING, LESS<br/>CHARGING</h5>
+            <div class="flex justify-center items-center w-full">
+                <img alt="Illustration showing listening vs charging for EarPods" class="object-cover w-auto lg:w-80 h-auto mt-auto" src="/asset/banner/pixelcut-export (1).png"/>
             </div>
-            <div class="rounded-3xl flex flex-col space-y-7 h-[400px]">
-                <!-- First Item -->
-                <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
-                    <div class="fade-left fill-content border rounded-full border-black p-3 w-1/2 flex items-center justify-center h-full">
-                        <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">MODERN</p>
-                    </div>
-                    <div class="fill-content icon-fill border rounded-full border-black p-3 flex items-center justify-center h-full w-12">
-                        <i class="fas fa-wifi text-center text-2xl"></i>
-                    </div>
-                </div>
+        </div>
+        <div class="rounded-3xl flex flex-col space-y-7 h-[400px]" role="complementary" aria-label="EarPods features">
             
-                <!-- Second Item -->
-                <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
-                    <div class="fill-content icon-fill border w-24 rounded-full border-black p-3 flex items-center justify-center h-full w-12">
-                        <img src="/asset/icons/cube_icon-icons.com_50409 (1).png" class="w-20" alt="icon" />
-                    </div>
-                    <div class="fade-left fill-content icon-fill border rounded-full border-black p-3 w-3/4 flex items-center justify-center h-full">
-                        <p class="text-center whitespace-nowrap banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">IN-EAR DETECTION</p>
-                    </div>
+            <!-- Feature Items -->
+            <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
+                <div class="fade-left fill-content border rounded-full border-black p-3 w-1/2 flex items-center justify-center h-full">
+                    <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">MODERN</p>
                 </div>
-            
-                <!-- Third Item -->
-                <div class="fade-left parent-sub fill-content border rounded-full border-black p-3 w-full flex items-center justify-center flex-grow">
-                    <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">BLUETOOTH 5.3</p>
-                </div>
-            
-                <!-- Fourth Item -->
-                <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
-                    <div class="fade-left fill-content border rounded-full border-black p-3 w-1/2 flex items-center justify-center h-full">
-                        <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">AIRPODS</p>
-                    </div>
-                    <div class="fill-content icon-fill w-20 border rounded-full border-black p-3 flex items-center justify-center h-full w-12">
-                        <img src="/asset/icons/cube_transparent_icon_152650 (1).png" class="w-20" alt="icon"/>
-                    </div>
+                <div class="fill-content icon-fill border rounded-full border-black p-3 flex items-center justify-center h-full w-12">
+                    <i class="fas fa-wifi text-center text-2xl" aria-hidden="true"></i>
                 </div>
             </div>
             
+            <!-- More Feature Items -->
+            <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
+                <div class="fill-content icon-fill border w-24 rounded-full border-black p-3 flex items-center justify-center h-full w-12">
+                    <img src="/asset/icons/cube_icon-icons.com_50409 (1).png" class="w-20" alt="Cube icon representing feature" />
+                </div>
+                <div class="fade-left fill-content icon-fill border rounded-full border-black p-3 w-3/4 flex items-center justify-center h-full">
+                    <p class="text-center whitespace-nowrap banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">IN-EAR DETECTION</p>
+                </div>
+            </div>
+            
+            <div class="fade-left parent-sub fill-content border rounded-full border-black p-3 w-full flex items-center justify-center flex-grow">
+                <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">BLUETOOTH 5.3</p>
+            </div>
+            
+            <div class="parent-sub flex justify-between items-stretch w-full flex-grow">
+                <div class="fade-left fill-content border rounded-full border-black p-3 w-1/2 flex items-center justify-center h-full">
+                    <p class="text-center banner-satoshiLight-font font-bold text-sm md:text-lg lg:text-xl">AIRPODS</p>
+                </div>
+                <div class="fill-content icon-fill w-20 border rounded-full border-black p-3 flex items-center justify-center h-full w-12">
+                    <img src="/asset/icons/cube_transparent_icon_152650 (1).png" class="w-20" alt="Icon representing AirPods feature"/>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="info mt-10 border border-gray-300 rounded-3xl bg-grey-200 grid grid-cols-3 gap-2 p-14 h-screen" role="product Information">
+            <div class="h-full flex flex-col justify-between items-start p-4">
+                <div>
+                    <p class="banner-satoshiLight-font font-bold text-start text-5xl text-gray-500">/01</p>
+                </div>
+                <div class="w-full">
+                    <img src="/asset/others/[removal.ai]_a608b854-43a6-427c-937b-41961c2c85a4-3d-shapes-glowing-with-bright-holographic-colors.png" class="object-fit"/>
+                </div>
+            </div>
+            <div class="flex flex-col justify-between w-full">
+                <div class="flex justify-start">
+                    <h5 class="text-5xl font-bold banner-satoshiLight-font tracking-wider">Reviving Each Beat,<br/><span class="text-yellow-500">Igniting Moments.</span></h5>
+                </div>
+                <div class="flex justify-between items-center h-80 space-x-5 mt-20">
+                    <div class="content-div border border-black flex flex-col h-3/4 justify-between rounded-3xl">
+                        <div class="flex justify-between banner-satoshiLight-font text-2xl font-bold tracking-wider">
+                            <h5>
+                                12.4 Mm Large Bio-<br/>
+                                Fibre And Costume<br/>
+                                TPU Driver
+                            </h5>
+                            <h5>01</h5>
+                        </div>
+                        <p class="text-gray-600 text-start leading-relaxed text-justify w-full">
+                            Clear highs, powerfully pure bass, ultra <br/>
+                            light yet super rigid nature ensures high <br/>
+                            frequency details are enhanced without <br/>
+                            being harsh on the ears.
+                        </p>
+                    </div>
+                    <div class="content-div s-content border border-black flex flex-col h-3/4 justify-between rounded-3xl bg-gray-300">
+                        <div class="flex justify-between banner-satoshiLight-font text-2xl font-bold tracking-wider">
+                            <h5>Copper Coils</h5>
+                            <h5>02</h5>
+                        </div>
+                        <p class="text-gray-600 text-start leading-relaxed text-justify w-full">
+                            Clear highs, powerfully pure bass, ultra <br/>
+                            light yet super rigid nature ensures high <br/>
+                            frequency details are enhanced without <br/>
+                            being harsh on the ears.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-start items-start h-80 w-1/2">
+                    <div class="content-div border border-black flex flex-col h-3/4 justify-between rounded-3xl" style="width: 97%;">
+                        <div class="flex justify-between banner-satoshiLight-font text-2xl font-bold tracking-wider">
+                            <h5>
+                                12.4 Mm Large Bio-<br/>
+                                Fibre And Costume<br/>
+                                TPU Driver
+                            </h5>
+                            <h5>03</h5>
+                        </div>
+                        <p class="text-gray-600 text-start leading-relaxed text-justify w-full">
+                            Clear highs, powerfully pure bass, ultra <br/>
+                            light yet super rigid nature ensures high <br/>
+                            frequency details are enhanced without <br/>
+                            being harsh on the ears.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-full flex flex-col justify-between items-start p-4">
+                <div>
+                    <p class="banner-satoshiLight-font font-semibold text-center text-gray-500">CMF Buds: Dirac Opteo™ tuning delivers immersive soundscapes with deep bass, balanced mid-range, and ethereal treble.</p>
+                </div>
+                <div class="flex justify-start items-start mb-3" style="height: 60%; width: 100%;">
+                    <div class="border border-black flex flex-col h-full justify-between rounded-3xl p-5">
+                        <div class="flex justify-between banner-satoshiLight-font text-2xl font-bold tracking-wider">
+                            <h5>
+                                12.4 Mm Large Bio-<br/>
+                                Fibre And Costume<br/>
+                                TPU Driver
+                            </h5>
+                            <h5>03</h5>
+                        </div>
+                        <p class="text-gray-600 text-start text-tighter text-justify w-full">
+                            Dirac Opteo™ digitally enhances the sound based on patented correction technology - delivering rich, immersive audio.We conducted user surveys and jointly tuned five popular EQ settings with Dirac to ensure an optimal sonic experience adapted to various music styles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
     
     
 
@@ -153,7 +239,7 @@
 
         <!--Menu Icon-->
         <div class="flex justify-between items-center p-9">
-            <h1 class="text-2xl ml-3">OnAir</h1>
+            <h1 class="text-2xl text-white ml-3">OnAir</h1>
             <button id="close-button" class="transform transition-all duration-300 hover:rotate-180 hover:text-red-500">
                 <i class="fas fa-close"></i>
             </button>

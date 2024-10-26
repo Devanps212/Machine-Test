@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "satoshi";
+    src: url('/fonts/Satoshi-Black.otf');
+}
+
+@font-face {
+    font-family: "satoshi light";
+    src: url('/fonts/Satoshi-Light.otf');
+}
+
+
+.dot::after{
+    content: "•";
+    margin: 0 21px;
+}
+
+.dot:last-child::after{
+    content: "";
+    margin: 0;
+}
+
+.cart, .wishlist{
+    transition: transform 0.1s ease-in;
+}
+
+.cart:hover,
+.wishlist:hover{
+    transform: translateY(-2px);
+}
+
+.sidebar-items{
+    transition: transform 0.1s ease-in;
+}
+
+.sidebar-items:hover{
+    transform: translateY(-2px);
+    border: 1px solid black;
+}
+
+.banner-head{
+    font-size: 10rem;
+    padding: 0px 4rem;
+}
+
+.airpod-img{
+    width: 35%;
+    height: 89%;
+}
+
+.banner-div{
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr 0.6fr;
+}
+
+.banner-satoshi-font{
+    font-family: "satoshi", sans-serif;
+}
+
+.each-banner-div {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1), 0px 8px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.banner-satoshiLight-font{
+    font-family: "satoshi light", sans-serif;
+}
+.fill-content {
+    height: -webkit-fill-available;
+    height: fill-available;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.parent-sub {
+    height: 4rem;
+}
+
+.fade-left {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+    -webkit-mask-image: linear-gradient(to left, black 50%, transparent);
+    mask-image: linear-gradient(to left, black 50%, transparent);
+    padding-right: 0.5rem;
+}
+
+
+.icon-fill{
+    padding: 0px 32px;
+}
+
+
+@media(max-width:1024px){
+    .banner-div{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:500px){
+    .banner-div{
+        grid-template-columns: 1fr
+    }
+}

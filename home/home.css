@@ -8,55 +8,68 @@
     src: url('/fonts/Satoshi-Light.otf');
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-.dot::after{
+.info {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+}
+
+.banner-satoshi-font {
+    font-family: "satoshi", sans-serif;
+}
+
+.banner-satoshiLight-font {
+    font-family: "satoshi light", sans-serif;
+}
+
+.last-content{
+    height: 60%; 
+    width: 100%;
+}
+
+.dot::after {
     content: "•";
     margin: 0 21px;
 }
 
-.dot:last-child::after{
+.dot:last-child::after {
     content: "";
-    margin: 0;
 }
 
-.cart, .wishlist{
+.cart, .wishlist {
     transition: transform 0.1s ease-in;
 }
 
-.cart:hover,
-.wishlist:hover{
+.cart:hover, .wishlist:hover {
     transform: translateY(-2px);
 }
 
-.sidebar-items{
+.sidebar-items {
     transition: transform 0.1s ease-in;
 }
 
-.sidebar-items:hover{
+.sidebar-items:hover {
     transform: translateY(-2px);
     border: 1px solid black;
 }
 
-.banner-head{
+.banner-head {
     font-size: 10rem;
     padding: 0px 4rem;
 }
 
-.airpod-img{
+.airpod-img {
     width: 32%;
     height: 89%;
 }
 
-.banner-div{
+.banner-div {
     display: grid;
     grid-template-columns: 0.9fr 1.2fr 0.6fr;
-}
-
-.banner-satoshi-font{
-    font-family: "satoshi", sans-serif;
 }
 
 .each-banner-div {
@@ -64,9 +77,6 @@ body{
     height: 100%;
 }
 
-.banner-satoshiLight-font{
-    font-family: "satoshi light", sans-serif;
-}
 .fill-content {
     height: -webkit-fill-available;
     height: fill-available;
@@ -74,11 +84,13 @@ body{
     box-sizing: border-box;
 }
 
-.content-div{
+.content-div {
     height: 90%;
     width: 90%;
     padding: 15px;
 }
+
+
 
 .s-content {
     position: relative;
@@ -86,9 +98,12 @@ body{
     border: 1px solid black;
 }
 
-
 .parent-sub {
     height: 4rem;
+}
+
+.sec-section-flex1{
+    width: 50%;
 }
 
 .fade-left {
@@ -98,47 +113,83 @@ body{
     padding-right: 0.5rem;
 }
 
-
-.icon-fill{
+.icon-fill {
     padding: 0px 32px;
 }
 
-.info{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+@media (max-width: 1290px) {
+    .info {
+        grid-template-columns: 3fr;
+    }
 }
 
-@media(max-width:1024px){
-    .banner-div{
-        grid-template-columns: repeat(2, 1fr)
+@media (max-width: 1330px) {
+    .info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .last-content{
+        width: 100%;
+        padding: 12px;
+    }
+    .sec-section-flex1{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner-div {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .banner-head{
+    .info {
+        grid-template-columns:1fr;
+    }
+
+    .last-content{
+        height: 100%; 
+        width: 100%;
+    }
+
+    .banner-head {
         font-size: 7rem;
     }
 
-    .banner{
+    .banner {
         padding: 7rem 2rem;
+    }
+
+    .content-div {
+        height: 50%;
+        width: 90%;
+        padding: 30px;
     }
 }
 
-@media(max-width:620px){
-    .banner-div{
+@media (max-width: 620px) {
+    .banner-div, .info {
         grid-template-columns: 1fr;
         justify-items: center;
     }
+    
+    
 
-    .banner-head{
+    .banner-head {
         font-size: 4.8rem;
     }
 
-    .banner{
+    .banner {
         padding: 7rem 2rem;
+    }
+
+    .content-div, .s-content, .icon-fill {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 }
 
-@media(max-width:600px){
-    .banner-head{
+@media (max-width: 600px) {
+    .banner-head {
         font-size: 4rem;
     }
 }
@@ -149,21 +200,19 @@ body{
         padding: 0 1rem;
     }
 
-    .banner-div {
+    .banner-div, .info {
         grid-template-columns: 1fr;
         padding: 1rem;
     }
-
 
     .each-banner-div, .parent-sub, .fill-content {
         padding: 0.5rem;
         box-sizing: border-box;
     }
 
-    .image-layout{
+    .image-layout {
         width: 50%;
         display: grid;
         place-items: center;
-
     }
 }

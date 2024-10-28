@@ -20,7 +20,7 @@
 
 body {
     overflow-x: hidden;
-    background-color:rgba(230, 230, 230, 0.87);
+    background: linear-gradient(to bottom, #F2F3FE 0%, #DBDCEF 100%);
 }
 
 
@@ -38,9 +38,16 @@ body {
     font-family: "satoshi", sans-serif;
 }
 
+.brand-text{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    color: 28282A;
+}
+
 .hug-font{
     font-family: 'hug';
 }
+
 
 .banner-satoshiLight-font {
     font-family: "satoshi light", sans-serif;
@@ -53,7 +60,7 @@ body {
 
 .dot::after {
     content: "•";
-    margin: 0 21px;
+    margin: 0 28px;
 }
 
 .dot:last-child::after {
@@ -87,6 +94,10 @@ body {
     height: 89%;
 }
 
+.shadow-bottom{
+    filter: drop-shadow(-10px 8px 5px rgba(0, 0, 0, 0.2));
+}
+
 .banner-div {
     display: grid;
     grid-template-columns: 0.9fr 1.2fr 0.6fr;
@@ -97,12 +108,12 @@ body {
     height: 100%;
 }
 
-.fill-content {
+/* .fill-content {
     height: -webkit-fill-available;
     height: fill-available;
     height: 100%;
     box-sizing: border-box;
-}
+} */
 
 .content-div {
     height: 90%;
@@ -113,8 +124,8 @@ body {
 .s-content {
     position: relative;
     clip-path: polygon(0 0, calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%);
-    border: 1px solid black;
 }
+
 
 .parent-sub {
     height: 4rem;
@@ -130,6 +141,13 @@ body {
     mask-image: linear-gradient(to left, black 50%, transparent);
     padding-right: 0.5rem;
 }
+.fade-top {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+    -webkit-mask-image: linear-gradient(to top, black 50%, transparent);
+    mask-image: linear-gradient(to top, black 50%, transparent);
+    padding-bottom: 0.5rem;
+}
+
 
 .icon-fill {
     padding: 0px 32px;
@@ -138,9 +156,10 @@ body {
 .flowing-text {
     white-space: nowrap;
     font-size: 14vw;
-    color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
     animation: flow 15s linear infinite;
     z-index: 0;
+    opacity: 8%;
 }
 
 @keyframes flow {
